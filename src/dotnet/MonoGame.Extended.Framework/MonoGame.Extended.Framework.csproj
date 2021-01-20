@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1BA5F66-D116-4B14-A860-0FCDCFF654D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoGame.Extended.Framework</RootNamespace>
+    <AssemblyName>MonoGame.Extended.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\lib\net452\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimationComponent.cs" />
+    <Compile Include="BitmapFonts\BitmapFont.cs" />
+    <Compile Include="BitmapFonts\BitmapFontExtensions.cs" />
+    <Compile Include="BitmapFonts\BitmapFontReader.cs" />
+    <Compile Include="BitmapFonts\BitmapFontRegion.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Collections\Bag.cs" />
+    <Compile Include="Collections\Deque.cs" />
+    <Compile Include="Collections\DictionaryExtensions.cs" />
+    <Compile Include="Collections\IObservableCollection.cs" />
+    <Compile Include="Collections\IPoolable.cs" />
+    <Compile Include="Collections\ItemEventArgs.cs" />
+    <Compile Include="Collections\KeyedCollection.cs" />
+    <Compile Include="Collections\ListExtensions.cs" />
+    <Compile Include="Collections\ObjectPool.cs" />
+    <Compile Include="Collections\ObservableCollection.cs" />
+    <Compile Include="Collections\Pool.cs" />
+    <Compile Include="ColorExtensions.cs" />
+    <Compile Include="ColorHelper.cs" />
+    <Compile Include="Content\ContentManagerExtensions.cs" />
+    <Compile Include="Content\ContentReaderExtensions.cs" />
+    <Compile Include="FramesPerSecondCounter.cs" />
+    <Compile Include="FramesPerSecondCounterComponent.cs" />
+    <Compile Include="GameComponentCollectionExtensions.cs" />
+    <Compile Include="GameTimeExtensions.cs" />
+    <Compile Include="HslColor.cs" />
+    <Compile Include="IColorable.cs" />
+    <Compile Include="IEquatableByRef.cs" />
+    <Compile Include="IMovable.cs" />
+    <Compile Include="IRectangular.cs" />
+    <Compile Include="IRotatable.cs" />
+    <Compile Include="IScalable.cs" />
+    <Compile Include="ISizable.cs" />
+    <Compile Include="IUpdate.cs" />
+    <Compile Include="Math\Angle.cs" />
+    <Compile Include="Math\BoundingRectangle.cs" />
+    <Compile Include="Math\CircleF.cs" />
+    <Compile Include="Math\EllipseF.cs" />
+    <Compile Include="Math\FastRandom.cs" />
+    <Compile Include="Math\FloatHelper.cs" />
+    <Compile Include="Math\Matrix2.cs" />
+    <Compile Include="Math\MatrixExtensions.cs" />
+    <Compile Include="Math\Point2.cs" />
+    <Compile Include="Math\Point3.cs" />
+    <Compile Include="Math\PrimitivesHelper.cs" />
+    <Compile Include="Math\RandomExtensions.cs" />
+    <Compile Include="Math\Range.cs" />
+    <Compile Include="Math\Ray2.cs" />
+    <Compile Include="Math\RectangleExtensions.cs" />
+    <Compile Include="Math\RectangleF.cs" />
+    <Compile Include="Math\Segment2.cs" />
+    <Compile Include="Math\ShapeExtensions.cs" />
+    <Compile Include="Math\ShapeF.cs" />
+    <Compile Include="Math\Size.cs" />
+    <Compile Include="Math\Size2.cs" />
+    <Compile Include="Math\Size3.cs" />
+    <Compile Include="Math\Thickness.cs" />
+    <Compile Include="Math\Triangulation\CyclicalList.cs" />
+    <Compile Include="Math\Triangulation\IndexableCyclicalLinkedList.cs" />
+    <Compile Include="Math\Triangulation\LineSegment.cs" />
+    <Compile Include="Math\Triangulation\Triangle.cs" />
+    <Compile Include="Math\Triangulation\Triangulator.cs" />
+    <Compile Include="Math\Triangulation\Vertex.cs" />
+    <Compile Include="Math\Vector2Extensions.cs" />
+    <Compile Include="OrthographicCamera.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\Screen.cs" />
+    <Compile Include="Screens\ScreenManager.cs" />
+    <Compile Include="Screens\Transitions\ExpandTransition.cs" />
+    <Compile Include="Screens\Transitions\FadeTransition.cs" />
+    <Compile Include="Screens\Transitions\Transition.cs" />
+    <Compile Include="Serialization\BaseTypeJsonConverter.cs" />
+    <Compile Include="Serialization\ColorJsonConverter.cs" />
+    <Compile Include="Serialization\ContentManagerJsonConverter.cs" />
+    <Compile Include="Serialization\HslColorJsonConverter.cs" />
+    <Compile Include="Serialization\JsonContentLoader.cs" />
+    <Compile Include="Serialization\JsonContentTypeReader.cs" />
+    <Compile Include="Serialization\JsonReaderExtensions.cs" />
+    <Compile Include="Serialization\MonoGameJsonSerializer.cs" />
+    <Compile Include="Serialization\NinePatchRegion2DJsonConverter.cs" />
+    <Compile Include="Serialization\RangeJsonConverter.cs" />
+    <Compile Include="Serialization\ShortNameJsonContractResolver.cs" />
+    <Compile Include="Serialization\Size2JsonConverter.cs" />
+    <Compile Include="Serialization\SizeJsonConverter.cs" />
+    <Compile Include="Serialization\TextContentLoader.cs" />
+    <Compile Include="Serialization\TextureRegion2DJsonConverter.cs" />
+    <Compile Include="Serialization\TextureRegionService.cs" />
+    <Compile Include="Serialization\ThicknessJsonConverter.cs" />
+    <Compile Include="Serialization\Vector2JsonConverter.cs" />
+    <Compile Include="Shapes\Polygon.cs" />
+    <Compile Include="Shapes\Polyline.cs" />
+    <Compile Include="SimpleDrawableGameComponent.cs" />
+    <Compile Include="SimpleGameComponent.cs" />
+    <Compile Include="Sprites\AnimatedSprite.cs" />
+    <Compile Include="Sprites\Animation.cs" />
+    <Compile Include="Sprites\ISpriteBatchDrawable.cs" />
+    <Compile Include="Sprites\Sprite.cs" />
+    <Compile Include="Sprites\SpriteExtensions.cs" />
+    <Compile Include="Sprites\SpriteSheet.cs" />
+    <Compile Include="Sprites\SpriteSheetAnimation.cs" />
+    <Compile Include="Sprites\SpriteSheetAnimationCycle.cs" />
+    <Compile Include="Sprites\SpriteSheetAnimationData.cs" />
+    <Compile Include="Sprites\SpriteSheetAnimationFrame.cs" />
+    <Compile Include="TextureAtlases\NinePatchRegion2D.cs" />
+    <Compile Include="TextureAtlases\TextureAtlas.cs" />
+    <Compile Include="TextureAtlases\TextureAtlasExtensions.cs" />
+    <Compile Include="TextureAtlases\TextureAtlasJsonContentTypeReader.cs" />
+    <Compile Include="TextureAtlases\TextureAtlasJsonConverter.cs" />
+    <Compile Include="TextureAtlases\TextureAtlasReader.cs" />
+    <Compile Include="TextureAtlases\TexturePackerFile.cs" />
+    <Compile Include="TextureAtlases\TexturePackerMeta.cs" />
+    <Compile Include="TextureAtlases\TexturePackerPoint.cs" />
+    <Compile Include="TextureAtlases\TexturePackerRectangle.cs" />
+    <Compile Include="TextureAtlases\TexturePackerRegion.cs" />
+    <Compile Include="TextureAtlases\TexturePackerSize.cs" />
+    <Compile Include="TextureAtlases\TextureRegion2D.cs" />
+    <Compile Include="Timers\ContinuousClock.cs" />
+    <Compile Include="Timers\CountdownTimer.cs" />
+    <Compile Include="Timers\GameTimer.cs" />
+    <Compile Include="Timers\TimerState.cs" />
+    <Compile Include="Transform.cs" />
+    <Compile Include="VectorDraw\PrimitiveBatch.cs" />
+    <Compile Include="VectorDraw\PrimitiveDrawing.cs" />
+    <Compile Include="ViewportAdapters\BoxingViewportAdapter.cs" />
+    <Compile Include="ViewportAdapters\DefaultViewportAdapter.cs" />
+    <Compile Include="ViewportAdapters\ScalingViewportAdapter.cs" />
+    <Compile Include="ViewportAdapters\ViewportAdapter.cs" />
+    <Compile Include="ViewportAdapters\WindowViewportAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets'))" />
+  </Target>
+</Project>

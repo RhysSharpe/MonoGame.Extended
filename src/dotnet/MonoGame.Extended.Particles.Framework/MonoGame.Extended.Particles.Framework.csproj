@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F887318-D93E-4708-AFA2-75C6E8859C92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoGame.Extended.Particles.Framework</RootNamespace>
+    <AssemblyName>MonoGame.Extended.Particles.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\lib\net452\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FastRandomExtensions.cs" />
+    <Compile Include="LineSegment.cs" />
+    <Compile Include="Modifiers\AgeModifier.cs" />
+    <Compile Include="Modifiers\Containers\CircleContainerModifier.cs" />
+    <Compile Include="Modifiers\Containers\RectangleContainerModifier.cs" />
+    <Compile Include="Modifiers\Containers\RectangleLoopContainerModifier.cs" />
+    <Compile Include="Modifiers\DragModifier.cs" />
+    <Compile Include="Modifiers\Interpolators\ColorInterpolator.cs" />
+    <Compile Include="Modifiers\Interpolators\HueInterpolator.cs" />
+    <Compile Include="Modifiers\Interpolators\Interpolator.cs" />
+    <Compile Include="Modifiers\Interpolators\OpacityInterpolator.cs" />
+    <Compile Include="Modifiers\Interpolators\RotationInterpolator.cs" />
+    <Compile Include="Modifiers\Interpolators\ScaleInterpolator.cs" />
+    <Compile Include="Modifiers\LinearGravityModifier.cs" />
+    <Compile Include="Modifiers\Modifier.cs" />
+    <Compile Include="Modifiers\OpacityFastFadeModifier.cs" />
+    <Compile Include="Modifiers\RotationModifier.cs" />
+    <Compile Include="Modifiers\VelocityColorModifier.cs" />
+    <Compile Include="Modifiers\VelocityModifier.cs" />
+    <Compile Include="Modifiers\VortexModifier.cs" />
+    <Compile Include="Particle.cs" />
+    <Compile Include="ParticleBuffer.cs" />
+    <Compile Include="ParticleEffect.cs" />
+    <Compile Include="ParticleEmitter.cs" />
+    <Compile Include="ParticleExtensions.cs" />
+    <Compile Include="ParticleModifierExecutionStrategy.cs" />
+    <Compile Include="ParticleReleaseParameters.cs" />
+    <Compile Include="Profiles\BoxFillProfile.cs" />
+    <Compile Include="Profiles\BoxProfile.cs" />
+    <Compile Include="Profiles\BoxUniformProfile.cs" />
+    <Compile Include="Profiles\CircleProfile.cs" />
+    <Compile Include="Profiles\LineProfile.cs" />
+    <Compile Include="Profiles\PointProfile.cs" />
+    <Compile Include="Profiles\Profile.cs" />
+    <Compile Include="Profiles\RingProfile.cs" />
+    <Compile Include="Profiles\SprayProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\InterpolatorJsonConverter.cs" />
+    <Compile Include="Serialization\ModifierExecutionStrategyJsonConverter.cs" />
+    <Compile Include="Serialization\ModifierJsonConverter.cs" />
+    <Compile Include="Serialization\ParticleJsonSerializer.cs" />
+    <Compile Include="Serialization\ProfileJsonConverter.cs" />
+    <Compile Include="Serialization\TimeSpanJsonConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonoGame.Extended.Framework\MonoGame.Extended.Framework.csproj">
+      <Project>{a1ba5f66-d116-4b14-a860-0fcdcff654d1}</Project>
+      <Name>MonoGame.Extended.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets'))" />
+  </Target>
+</Project>
