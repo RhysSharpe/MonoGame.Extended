@@ -74,6 +74,10 @@
       <Project>{6e28bc89-2545-432f-b875-539c496d8876}</Project>
       <Name>MonoGame.Extended.Collisions.Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MonoGame.Extended.Framework\MonoGame.Extended.Framework.csproj">
+      <Project>{a1ba5f66-d116-4b14-a860-0fcdcff654d1}</Project>
+      <Name>MonoGame.Extended.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" />

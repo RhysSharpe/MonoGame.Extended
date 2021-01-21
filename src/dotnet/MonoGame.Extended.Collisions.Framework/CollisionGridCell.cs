@@ -1,6 +1,4 @@
-﻿
-
-namespace MonoGame.Extended.Collisions
+﻿namespace MonoGame.Extended.Collisions
 {
     /// <summary>
     /// Represents a single cell in a collision grid.
