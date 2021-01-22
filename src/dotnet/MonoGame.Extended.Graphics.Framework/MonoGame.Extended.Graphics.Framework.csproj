@@ -7,13 +7,14 @@
     <ProjectGuid>{0CD69D58-1A7D-4515-A624-82A98F115EA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonoGame.Extended.Graphics.Framework</RootNamespace>
-    <AssemblyName>MonoGame.Extended.Graphics.Framework</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>MonoGame.Extended.Graphics</RootNamespace>
+    <AssemblyName>MonoGame.Extended.Graphics</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

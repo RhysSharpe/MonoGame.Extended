@@ -7,13 +7,14 @@
     <ProjectGuid>{378442ED-02FE-4A12-92B1-735C62970C56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonoGame.Extended.SceneGraphs.Framework</RootNamespace>
-    <AssemblyName>MonoGame.Extended.SceneGraphs.Framework</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>MonoGame.Extended.SceneGraphs</RootNamespace>
+    <AssemblyName>MonoGame.Extended.SceneGraphs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
